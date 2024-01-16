@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.index-menu {
+    @apply flex flex-col items-center justify-between gap-12
+     *:bg-slate-100 *:w-2/3 md:*:w-1/4 *:h-[7dvh] *:flex 
+     *:items-center *:justify-center *:rounded-xl *:text-xl *:font-medium
+      *:transition-colors *:duration-300
+      hover:*:bg-orange-600 hover:*:text-white
+      hover:*:shadow-2xl hover:*:shadow-orange-800/70
+}
