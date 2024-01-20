@@ -4,7 +4,12 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "back-grad": "radial-gradient(#28b8d5,#020344)",
+        "back-grad": "radial-gradient(#8ECAE6,#023047)",
+      },
+      colors: {
+        "primary": "#FFB703",
+        "primary-hover": "#FB8500",
+        "back" : "#023047"
       },
     },
   },

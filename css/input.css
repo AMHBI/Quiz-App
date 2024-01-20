@@ -4,14 +4,14 @@
 
 
 .body-classes {
-    @apply bg-back-grad w-11/12 md:w-2/3 text-center min-h-screen mx-auto pt-[15dvh]
+    @apply bg-back-grad w-11/12 md:w-2/3 text-center min-h-screen mx-auto pt-[12dvh]
 }
 .index-menu {
     @apply flex flex-col items-center justify-between gap-12
      *:bg-slate-100 *:w-2/3 md:*:w-1/4 *:h-[7dvh] *:flex 
      *:items-center *:justify-center *:rounded-xl *:text-xl *:font-medium
       *:transition-colors *:duration-300
-      hover:*:bg-orange-600 hover:*:text-white
+      hover:*:bg-primary-hover hover:*:text-white
       hover:*:shadow-2xl hover:*:shadow-orange-800/70
 }
 .index-menu a {
@@ -19,4 +19,12 @@
 }
 span#loader {
     @apply hidden animate-spin  size-28 border-t-transparent border-b-transparent rounded-[50%] border-x-8
+}
+
+.answer-button {
+    @apply bg-primary transition-colors duration-200 text-black mt-5 h-12 rounded-lg font-semibold hover:bg-primary-hover hover:shadow-xl shadow-black
+}
+
+.FN-buttons {
+    @apply bg-primary text-black px-7 py-2 rounded-xl font-semibold hover:bg-primary-hover transition-colors duration-300
 }
