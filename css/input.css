@@ -18,7 +18,7 @@
     @apply size-full flex items-center justify-center
 }
 span#loader {
-    @apply hidden animate-spin  size-28 border-t-transparent border-b-transparent rounded-[50%] border-x-8
+    @apply inline-block animate-spin  size-28 border-t-transparent border-b-transparent rounded-[50%] border-x-8
 }
 
 .answer-button {
@@ -27,4 +27,10 @@ span#loader {
 
 .FN-buttons {
     @apply bg-primary text-black px-7 py-2 rounded-xl font-semibold hover:bg-primary-hover transition-colors duration-300
+}
+.correctAnswer{
+    @apply bg-green-600 hover:bg-green-600 text-white
+}
+.inCorrectAnswer{
+    @apply bg-rose-600 hover:bg-rose-600 text-white
 }
