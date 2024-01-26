@@ -8,9 +8,11 @@ const scoreText = document.getElementById("score");
 const questionNumText = document.getElementById("question-number");
 const nextBtn = document.getElementById("next-btn");
 const finishBtn = document.getElementById("finish-btn");
+const errorLoader = document.getElementById("error-loader")
+const difficulty = localStorage.getItem("difficulty") || "medium"
 //URL
 const URL =
-  "https://opentdb.com/api.php?amount=10&difficulty=medium&type=multiple";
+  `https://opentdb.com/api.php?amount=10&difficulty=${difficulty}&type=multiple`;
 //Variables
 const CORRECT_BONOUS = 10;
 let formatedData = null;
@@ -18,15 +20,21 @@ let questionIndex = 0;
 let correctAnswer = null;
 let isAcceptable = true;
 let score = 0;
-
 const fetchData = async () => {
-  const response = await fetch(URL);
-  const json = await response.json();
-  const data = await json.results;
-  console.log(data);
-  formatedData = formatData(data);
-  start();
+  try {
+    const response = await fetch(URL);
+    const json = await response.json();
+    const data = await json.results;
+    formatedData = formatData(data);
+    start();
+  } catch (error) {
+    loader.style.display = "none";
+    errorLoader.style.display= "block"
+    errorLoader.innerText += " " + error
+   
+  }
 };
+
 
 const start = () => {
   showQuestion();

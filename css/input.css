@@ -34,3 +34,7 @@ span#loader {
 .inCorrectAnswer{
     @apply bg-rose-600 hover:bg-rose-600 text-white
 }
+
+ol li span:last-child{
+    @apply text-primary
+}
