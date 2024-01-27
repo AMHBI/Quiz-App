@@ -622,10 +622,6 @@ video {
   width: 100%;
 }
 
-.w-1\/4 {
-  width: 25%;
-}
-
 .flex-col {
   flex-direction: column;
 }
@@ -754,10 +750,6 @@ video {
   font-weight: 600;
 }
 
-.font-bold {
-  font-weight: 700;
-}
-
 .text-primary {
   --tw-text-opacity: 1;
   color: rgb(255 183 3 / var(--tw-text-opacity));
@@ -774,12 +766,12 @@ video {
   transition-duration: 150ms;
 }
 
-.duration-200 {
-  transition-duration: 200ms;
-}
-
 .duration-150 {
   transition-duration: 150ms;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
 }
 
 .body-classes {
